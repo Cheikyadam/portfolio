@@ -8,7 +8,7 @@ c-footer.footer-section {
   font-family: inherit;
 }
 
-/* --- TITRE AVEC DEGRADÉ (Fix Warning) --- */
+/* --- TITRE AVEC DEGRADÉ */
 .footer-brand {
   font-size: 1.5rem;
   font-weight: 700;
@@ -17,10 +17,10 @@ c-footer.footer-section {
 
 .footer-brand span {
   background: linear-gradient(135deg, #667eea, #764ba2);
-  -webkit-background-clip: text; /* Préfixe Webkit */
-  background-clip: text;         /* Propriété standard (Fixe le warning) */
+  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #764ba2; /* Fallback si le dégradé ne charge pas */
+  color: #764ba2;
 }
 
 .footer-tagline {
@@ -106,7 +106,7 @@ c-footer.footer-section {
   }
 }
 
-/* --- RE-FIX SECTION EXPÉRIENCES (DEBORDEMENT TITRE) --- */
+/* --- RE-FIX SECTION EXPÉRIENCES --- */
 @media (max-width: 768px) {
   .section-title {
     font-size: 1.5rem !important;
