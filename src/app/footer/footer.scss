@@ -1,0 +1,122 @@
+/* --- CONFIGURATION C-FOOTER --- */
+c-footer.footer-section {
+  background: #1e1e2f !important;
+  border-top: none !important;
+  color: white;
+  padding: 0;
+  display: block;
+  font-family: inherit;
+}
+
+/* --- TITRE AVEC DEGRADÉ (Fix Warning) --- */
+.footer-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.footer-brand span {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text; /* Préfixe Webkit */
+  background-clip: text;         /* Propriété standard (Fixe le warning) */
+  -webkit-text-fill-color: transparent;
+  color: #764ba2; /* Fallback si le dégradé ne charge pas */
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  color: #b0b0b0;
+  margin-top: 5px;
+}
+
+/* --- NAVIGATION --- */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-nav a {
+  color: #c0c0c0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #6c63ff;
+  transform: translateY(-2px);
+}
+
+/* --- RESEAUX SOCIAUX --- */
+.social-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(108, 99, 255, 0.1);
+  color: #6c63ff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background: #6c63ff;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+}
+
+/* --- COPYRIGHT --- */
+.copyright-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 0;
+}
+
+.copyright-bar p {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .social-links {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .footer-brand {
+    font-size: 1.3rem;
+  }
+}
+
+/* --- RE-FIX SECTION EXPÉRIENCES (DEBORDEMENT TITRE) --- */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.5rem !important;
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .section-title ng-icon {
+    margin-right: 0 !important;
+  }
+}

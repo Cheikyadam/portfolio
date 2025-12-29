@@ -1,0 +1,35 @@
+<c-navbar colorScheme="dark" expand="lg" class="bg-dark px-2" placement="fixed-top">
+  <a cNavbarBrand href="#" target="_blank">
+    Navbar
+  </a>
+  <button [cNavbarToggler]="collapseRef"></button>
+  <div #collapseRef="cCollapse" navbar cCollapse>
+    <c-navbar-nav class="ms-auto mb-2 mb-lg-0">
+      
+      <c-nav-item>
+        <a cNavLink [active] href="#about">A propos</a>
+      </c-nav-item>
+
+      <c-nav-item>
+        <a cNavLink href="#experiences">Expériences</a>
+      </c-nav-item>
+
+      <c-nav-item>
+        <a cNavLink href="#projects">Projets</a>
+      </c-nav-item>
+
+      <c-nav-item>
+        <a cNavLink href="#education">Formations</a>
+      </c-nav-item>
+
+      <c-nav-item>
+        <a cNavLink href="#skills">Skills</a>
+      </c-nav-item>
+
+      <c-nav-item>
+        <a cNavLink href="#contact">Contact</a>
+      </c-nav-item>
+
+    </c-navbar-nav>
+  </div>
+</c-navbar>

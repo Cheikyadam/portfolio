@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  padding-top: 56px;
+  background-color: #302b63 ;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden; /* Empêche le scroll horizontal brutalement */
+  width: 100%;
+}
+// * {
+//   outline: 1px solid red !important;
+// }
+
+

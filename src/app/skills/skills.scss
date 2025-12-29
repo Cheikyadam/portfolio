@@ -1,0 +1,89 @@
+/* --- SECTION SKILLS --- */
+.skills-section {
+  background: #24243e; /* Cohérence avec Expériences */
+  color: white;
+}
+
+/* --- CARTES DE COMPÉTENCES --- */
+.skill-card {
+  background: rgba(30, 30, 47, 0.95);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: 15px;
+  height: 100%;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(108, 99, 255, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(108, 99, 255, 0.2);
+}
+
+/* --- EN-TÊTE DES CARTES --- */
+.skill-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.skill-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  background: linear-gradient(135deg, #ffffff, #b0b0b0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skill-icon {
+  margin-right: 15px;
+  color: #6c63ff;
+  filter: drop-shadow(0 0 5px rgba(108, 99, 255, 0.5));
+}
+
+/* --- BADGES PERSONNALISÉS --- */
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-badge {
+  background: rgba(108, 99, 255, 0.1) !important;
+  border: 1px solid rgba(108, 99, 255, 0.3);
+  color: #d1d1d1 !important;
+  padding: 0.6rem 0.9rem !important;
+  font-size: 0.85rem !important;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.skill-badge:hover {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: white !important;
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .skill-card {
+    margin-bottom: 10px;
+  }
+  
+  .skill-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .badge-container {
+    gap: 6px;
+  }
+
+  .skill-badge {
+    padding: 0.4rem 0.7rem !important;
+    font-size: 0.8rem !important;
+  }
+}

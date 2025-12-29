@@ -1,0 +1,278 @@
+/* Ligne de séparation entre sections */
+.section-divider {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #6c63ff, transparent);
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+}
+
+/* Section expériences */
+.experiences-section {
+  background: #24243e;
+  color: white;
+  min-height: 100vh;
+}
+
+/* Header de section */
+.section-header {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.title-underline {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* Ligne centrale verticale */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #6c63ff, #6c63ff, transparent);
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.4);
+}
+
+/* Item de timeline */
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Gauche - contenu à gauche, dot à droite */
+.timeline-item.left {
+  justify-content: flex-end;
+  padding-right: calc(50% + 30px);
+}
+
+/* Droite - contenu à droite, dot à gauche */
+.timeline-item.right {
+  justify-content: flex-start;
+  padding-left: calc(50% + 30px);
+}
+
+/* Contenu de la timeline */
+.timeline-content {
+  width: 100%;
+  animation: fadeInScale 0.6s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Point (noeud) sur la ligne */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: 4px solid #24243e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.3);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  transform: translateX(-50%) scale(1.3);
+  box-shadow: 0 0 0 6px rgba(108, 99, 255, 0.5);
+}
+
+/* Carte d'expérience */
+.experience-card {
+  background: rgba(30, 30, 47, 0.95);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(108, 99, 255, 0.5);
+  box-shadow: 0 10px 30px rgba(108, 99, 255, 0.3);
+}
+
+/* En-tête de carte */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(108, 99, 255, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+}
+
+.company-link {
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.company-link:hover {
+  color: #8b84ff;
+  transform: translateX(3px);
+}
+
+/* Titre de l'expérience */
+.experience-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Liste des missions */
+.missions-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.missions-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: #c0c0c0;
+  line-height: 1.6;
+}
+
+.missions-list li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #6c63ff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  /* 1. On déplace la ligne tout à gauche pour libérer l'espace central */
+  .timeline::before {
+    left: 12px; /* Position ultra-réduite */
+  }
+
+  /* 2. Réduction du padding du container de l'item */
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 28px; /* Juste assez pour ne pas chevaucher le point */
+    padding-right: 5px;  /* Marge minimale à droite */
+    margin-bottom: 1.5rem;
+  }
+
+  /* 3. Ajustement du point sur la ligne */
+  .timeline-dot {
+    left: 12px;
+    width: 12px;
+    height: 12px;
+  }
+
+  /* 4. OPTIMISATION COREUI : On réduit le padding interne de la carte */
+  /* On cible la classe standard de CoreUI injectée par <c-card-body> */
+  .experience-card .card-body {
+    padding: 1rem !important; 
+  }
+
+  /* 5. On réduit les marges du header pour gagner de la hauteur */
+  .experience-header {
+    margin-bottom: 0.5rem;
+    gap: 0.25rem;
+  }
+
+  .experience-title {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  /* 6. Puces plus compactes pour éviter les retours à la ligne inutiles */
+  .missions-list li {
+    font-size: 0.85rem;
+    padding-left: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .missions-list li::before {
+    font-size: 1.1rem;
+    top: -2px; /* Réalignement vertical de la flèche */
+  }
+
+
+
+  .section-header {
+    margin-bottom: 2.5rem; /* Réduit l'espace sous le titre */
+    padding: 0 10px;       /* Sécurité pour pas que le texte touche les bords */
+  }
+
+  .section-title {
+    font-size: 1.5rem;    /* Réduction de la taille pour mobile */
+    display: flex;        /* Flexbox pour l'alignement */
+    flex-direction: row;  /* Garde icône et texte sur la même ligne */
+    align-items: center;  /* Centre l'icône verticalement par rapport au texte */
+    justify-content: center;
+    flex-wrap: wrap;      /* Permet au texte de passer dessous l'icône si vraiment trop long */
+    gap: 10px;            /* Espace entre icône et texte */
+    width: 100%;          /* S'assure de ne pas dépasser du parent */
+    word-break: break-word; /* Coupe les mots si nécessaire */
+  }
+
+  .section-title ng-icon {
+    font-size: 1.8rem;    /* Force une taille d'icône proportionnelle */
+    min-width: 1.8rem;    /* Empêche l'icône de s'écraser */
+    margin-right: 0 !important; /* On utilise le gap à la place */
+  }
+
+  .title-underline {
+    width: 60px;          /* Barre plus courte sur mobile */
+    margin-top: 0.5rem;
+  }
+}
