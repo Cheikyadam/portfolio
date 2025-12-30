@@ -20,7 +20,6 @@
       <div class="timeline">
 
         @for(exp of experiences; track exp.id; let i = $index){
-        <!-- Expérience 1 - Gauche -->
         <div class="timeline-item" [ngClass]="i % 2 === 0 ? 'left' : 'right'">
           <div class="timeline-content">
             <c-card class="experience-card">
@@ -49,62 +48,6 @@
           <div class="timeline-dot"></div>
         </div>
       }
-        <!-- Expérience 2 - Droite -->
-        <!-- <div class="timeline-item right">
-          <div class="timeline-content">
-            <c-card class="experience-card">
-              <c-card-body>
-                <div class="experience-header">
-                  <span class="date">
-                    <ng-icon name="ionCalendar" class="me-2"></ng-icon>
-                    Juin 2022 - Décembre 2022
-                  </span>
-                  <a href="https://entreprise.com" target="_blank" class="company-link">
-                    <ng-icon name="ionBusiness" class="me-1"></ng-icon>
-                    Nom Entreprise 2
-                    <ng-icon name="ionOpenOutline" size="16" class="ms-1"></ng-icon>
-                  </a>
-                </div>
-                <h3 class="experience-title">Stagiaire Développeur Web</h3>
-                <ul class="missions-list">
-                  <li>Création de composants réutilisables en React</li>
-                  <li>Intégration d'APIs REST</li>
-                  <li>Participation aux revues de code</li>
-                </ul>
-              </c-card-body>
-            </c-card>
-          </div>
-          <div class="timeline-dot"></div>
-        </div> -->
-
-        <!-- Expérience 3 - Gauche -->
-        <!-- <div class="timeline-item left">
-          <div class="timeline-content">
-            <c-card class="experience-card">
-              <c-card-body>
-                <div class="experience-header">
-                  <span class="date">
-                    <ng-icon name="ionCalendar" class="me-2"></ng-icon>
-                    Janvier 2022 - Mai 2022
-                  </span>
-                  <a href="https://entreprise.com" target="_blank" class="company-link">
-                    <ng-icon name="ionBusiness" class="me-1"></ng-icon>
-                    Nom Entreprise 3
-                    <ng-icon name="ionOpenOutline" size="16" class="ms-1"></ng-icon>
-                  </a>
-                </div>
-                <h3 class="experience-title">Assistant Développeur</h3>
-                <ul class="missions-list">
-                  <li>Support technique et maintenance d'applications</li>
-                  <li>Rédaction de documentation technique</li>
-                  <li>Tests et débogage d'applications</li>
-                </ul>
-              </c-card-body>
-            </c-card>
-          </div>
-          <div class="timeline-dot"></div>
-        </div> -->
-
       </div>
     </c-col>
   </c-row>

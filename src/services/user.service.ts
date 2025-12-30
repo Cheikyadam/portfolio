@@ -37,7 +37,7 @@ export class UserService{
         new Experience("DawnSoft",
             "Freelance Développeur Backend",
             [
-                "Conception, Développement d'API REST en PHP/Laravel avec MYSQL",
+                "Conception, Développement d'API REST en PHP/Laravel avec MySQL",
                 "Conception, Développement d'API REST en Node.js/Express avec MongoDB",
             ],
             new Date(2024, 8),
@@ -76,7 +76,7 @@ export class UserService{
         new Formation(
             false,
             "Institut Galilée - USPN (Paris XIII)",
-            "Master Informatique P2S (Programmation Surété et Sécurité",
+            "Master Informatique P2S (Programmation Sûreté et Sécurité",
             ["Top 6 Master en Programmtion en France"],
             new Date(2024, 8),
             undefined,
@@ -104,7 +104,7 @@ export class UserService{
             true,
             "ALX Africa",
             "Certficat en génie logiciel",
-            ["Programmation en C, Python, HTML/JavaScript, SQL Scripts Shell, déploiement web,etc."],
+            ["Programmation en C, Python, HTML/JavaScript, SQL, Scripts Shell, déploiement web,etc."],
             new Date(2023, 5),
             new Date(2024, 9),
             "https://www.alxafrica.com/",
@@ -117,8 +117,8 @@ export class UserService{
         new Project(
             "Etsionenparlait.info",
             `
-            Etsionenparlait.info est un site d'information responsive. Il permet aux admins de gérer les articles qui peuvent etre de tout format (Audio, Video, Texte brut). Ces articles 
-            peuvent etre publiés et rendus visibles à tous.
+            Etsionenparlait.info est un site d'information responsive. Il permet aux admins de gérer les articles qui peuvent être de tout format (Audio, Video, Texte brut). Ces articles 
+            peuvent être publiés et rendus visibles à tous.
             Développé en toute autonomie, ce projet m'a permis d'appréhender le monde du déploiement. Tout d'abord hébergé sur Hostinger, je l'ai ensuite hébergé sur un serveur
             au travers de Docker et Nginx.
             `,
@@ -130,11 +130,11 @@ export class UserService{
         new Project(
             "WhatSecure",
             `
-            WhatSecure est mon projet de fin d'études pour l'obtention du diplome de Licence. Il a été en binome sous la supervision d'un enseignant du parcours.
-            En plus d'offrir les fonctionnalités principales d'une application de messagerie (echange de texte, images, videos), WhatSecure a l'avantage de se verouiller
-            automatiquement si un autre utilisateur tente de visualiser vos messages en meme temps que vous.
+            WhatSecure est mon projet de fin d'études pour l'obtention du diplome de Licence. Il a été développé en binôme sous la supervision d'un enseignant du parcours.
+            En plus d'offrir les fonctionnalités principales d'une application de messagerie (échange de texte, images, vidéos), WhatSecure a l'avantage de se verouiller
+            automatiquement si un autre utilisateur tente de visualiser vos messages en même temps que vous.
             `,
-            ["Dart", "FLutter", "Java", "Spring Boot", "MongoDB", "API REST", "WebSocket", "Cryptographie", "RSA", "AES"],
+            ["Dart", "Flutter", "Java", "Spring Boot", "MongoDB", "API REST", "WebSocket", "Cryptographie", "RSA", "AES"],
             "whatsecure.png",
             "https://www.canva.com/design/DAGJ1yqKEnk/AOHfPVVke0pdXABudRiKcQ/edit?utm_content=DAGJ1yqKEnk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
         ),
@@ -145,7 +145,7 @@ export class UserService{
             `
             USPN Maps est une application Android développée en Master 2. Son objectif principal est d'aider les utilisateurs à trouver les différentes salles du Campus de Villetaneuse.
             Elle propose la recherche de salles, la consultation des informations sur les salles et un itinéraire pour rejoindre les salles au sein du Campus. Les itinéraires sont obtenues
-            grace à un serveur de tuiles hébergé sur un serveur via Docker et Nginx. USPN Maps a été déployé sur Google Play en tests internes.
+            grâce à un serveur de tuiles hébergé via Docker et Nginx. USPN Maps a été déployé sur Google Play en tests internes.
             `,
             ["Extraction de données", "Python", "Kotlin", "Android Studio", "SQL", "SQLite", "OSM", "Nginx", "Docker", "Google Play"],
             "uspn_maps.jpg",
@@ -166,7 +166,7 @@ export class UserService{
         new Project(
             "Projet Client Serveur",
             `
-            Ce projet d'apprentissage du langage Java a été fait en groupe de 3. Son but est de simuler les failures dans les environnements client-serveur.
+            Ce projet d'apprentissage du langage Java a été fait en groupe de 3. Son but est de simuler les problèmes dans les environnements client-serveur.
             Il y'avait d'un coté les clients qui tentaient de télécharger des fichiers et de l'autre coté le serveur qui tentait de repondre aux différentes demandes.
             Il faut noter qu'une connexion sur le serveur etait coupée avec une probabilité P donnée rendant le téléchargement de blocs de fichiers fastidieus. Nous avons réussi ce 
             projet avec la note de 17/20.
