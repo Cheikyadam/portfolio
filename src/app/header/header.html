@@ -1,6 +1,6 @@
 <c-navbar colorScheme="dark" expand="lg" class="bg-dark px-2" placement="fixed-top">
   <a cNavbarBrand href="#" target="_blank">
-    Navbar
+    {{ user.githubUsername }}
   </a>
   <button [cNavbarToggler]="collapseRef"></button>
   <div #collapseRef="cCollapse" navbar cCollapse>
@@ -15,15 +15,15 @@
       </c-nav-item>
 
       <c-nav-item>
-        <a cNavLink href="#projects">Projets</a>
-      </c-nav-item>
-
-      <c-nav-item>
         <a cNavLink href="#education">Formations</a>
       </c-nav-item>
 
       <c-nav-item>
-        <a cNavLink href="#skills">Skills</a>
+        <a cNavLink href="#projects">Projets</a>
+      </c-nav-item>
+
+      <c-nav-item>
+        <a cNavLink href="#skills">Compétences</a>
       </c-nav-item>
 
       <c-nav-item>

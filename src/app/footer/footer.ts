@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ContainerComponent, RowComponent, ColComponent, FooterComponent } from "@coreui/angular";
 import { NgIcon, provideIcons } from "@ng-icons/core";
 import { ionCall, ionLogoDiscord, ionLogoGithub, ionLogoLinkedin, ionMail } from '@ng-icons/ionicons';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-footer',
@@ -11,6 +12,7 @@ import { ionCall, ionLogoDiscord, ionLogoGithub, ionLogoLinkedin, ionMail } from
   viewProviders: [provideIcons({ ionLogoLinkedin, ionMail, ionLogoGithub , ionLogoDiscord, ionCall })]
 
 })
-export class Footer {
 
+export class Footer {
+  @Input() user!:User
 }

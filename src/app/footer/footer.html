@@ -6,38 +6,40 @@
       <c-row class="gy-4 align-items-center">
         
         <c-col xs="12" md="4" class="text-center text-md-start">
-          <h3 class="footer-brand">Mon<span>Portfolio</span></h3>
-          <p class="footer-tagline">Développeur Full Stack</p>
+          <h3 class="footer-brand"><span>{{ user.githubUsername }}</span></h3>
+          <p class="footer-tagline">{{ user.jobTitle }}</p>
         </c-col>
 
         <c-col xs="12" md="4" class="text-center">
           <nav class="footer-nav">
             <a href="#about">À propos</a>
             <a href="#experiences">Expériences</a>
-            <a href="#projects">Projets</a>
             <a href="#education">Formations</a>
-            <a href="#skills">Skills</a>
+            <a href="#projects">Projets</a>
+            <a href="#skills">Compétences</a>
             <a href="#contact">Contact</a>
           </nav>
         </c-col>
 
         <c-col xs="12" md="4" class="text-center text-md-end">
           <div class="social-links">
-            <a href="tel:+33600000000" class="social-link phone" aria-label="Téléphone">
+            @if (user.phoneNumber) {
+            <a [href]="user.phoneUrl" class="social-link phone" aria-label="Téléphone">
               <ng-icon name="ionCall" size="22"></ng-icon>
-            </a>
-            <a href="https://linkedin.com" target="_blank" class="social-link linkedin" aria-label="LinkedIn">
+            </a> }
+            <a [href]="user.linkedinUrl" target="_blank" class="social-link linkedin" aria-label="LinkedIn">
               <ng-icon name="ionLogoLinkedin" size="22"></ng-icon>
             </a>
-            <a href="https://github.com" target="_blank" class="social-link github" aria-label="GitHub">
+            <a [href]="user.githubUrl" target="_blank" class="social-link github" aria-label="GitHub">
               <ng-icon name="ionLogoGithub" size="22"></ng-icon>
             </a>
-            <a href="mailto:aaa@example.com" class="social-link email" aria-label="Email">
+            <a [href]="user.mailUrl" class="social-link email" aria-label="Email">
               <ng-icon name="ionMail" size="22"></ng-icon>
             </a>
-            <a href="https://discord.com" class="social-link discord" aria-label="Discord">
+            @if (user.discord) {
+            <a [href]="user.discordUrl" class="social-link discord" aria-label="Discord">
               <ng-icon name="ionLogoDiscord" size="22"></ng-icon>
-            </a>           
+            </a> }          
           </div>
         </c-col>
 
@@ -46,7 +48,7 @@
       <c-row class="mt-5">
         <c-col class="text-center">
           <div class="copyright-bar">
-            <p>&copy; 2025 Nom du Projet. Tous droits réservés.</p>
+            <p>&copy; 2025 {{ user.githubUsername }}. Tous droits réservés.</p>
           </div>
         </c-col>
       </c-row>

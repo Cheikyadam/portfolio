@@ -3,43 +3,47 @@
   <c-row class="justify-content-center align-items-center mb-5">
     <c-col xs="12" md="4" class="text-center mb-0 mb-md-0">
       <div class="profile-image-container">
-        <img src="photo.jpeg" alt="Photo de profil" class="profile-image">
+        <img [src]="user.photoUrl" alt="Photo de profil" class="profile-image">
       </div>
     </c-col>
   </c-row>
   
   <c-row class="justify-content-center">
     <c-col xs="12" md="8" class="text-center">
-      <h2 class="name-title mb-2">NOM Prénom</h2>
-      <h3 class="role-title mb-3">Développeur Logiciel</h3>
+      <h2 class="name-title mb-2">{{ user.firstname }} {{ user.lastname }}</h2>
+      <h3 class="role-title mb-3">{{ user.jobTitle }}</h3>
       
       <div class="social-links mb-4">
-        <a href="https://linkedin.com" target="_blank" class="social-link linkedin" aria-label="LinkedIn">
+        <a [href]="user.linkedinUrl" target="_blank" class="social-link linkedin" aria-label="LinkedIn">
           <ng-icon name="ionLogoLinkedin" size="24"></ng-icon>
         </a>
-        <a href="https://github.com" target="_blank" class="social-link github" aria-label="GitHub">
+        <a [href]="user.githubUrl" target="_blank" class="social-link github" aria-label="GitHub">
           <ng-icon name="ionLogoGithub" size="24"></ng-icon>
         </a>
-        <a href="mailto:aaa@example.com" class="social-link email" aria-label="Email">
+        <a [href]="user.mailUrl" class="social-link email" aria-label="Email">
           <ng-icon name="ionMail" size="24"></ng-icon>
         </a>
-        <a href="https://discord.com" target="_blank" class="social-link discord" aria-label="Discord">
+        @if(user.discord){
+        <a [href]="user.discordUrl" target="_blank" class="social-link discord" aria-label="Discord">
           <ng-icon name="ionLogoDiscord" size="24"></ng-icon>
-        </a>
-        <a href="tel:+33600000000" class="social-link phone" aria-label="Téléphone">
+        </a>}
+        @if (user.phoneNumber){
+        <a [href]="user.phoneUrl" class="social-link phone" aria-label="Téléphone">
           <ng-icon name="ionCall" size="22"></ng-icon>
-        </a>
+        </a>}
       </div>
       
       <div class="button-group">
-        <button class="custom-button primary-button">
-          <ng-icon name="ionCodeSlash" class="me-2"></ng-icon>
-          Mes Projets
-        </button>
-        <button class="custom-button secondary-button">
+        <a href="#projects">
+          <button class="custom-button primary-button">
+            <ng-icon name="ionCodeSlash" class="me-2"></ng-icon>
+            Mes Projets
+          </button>
+        </a>
+        <!-- <button class="custom-button secondary-button">
           <ng-icon name="ionMail" class="me-2"></ng-icon>
           Me contacter
-        </button>
+        </button> -->
       </div>
       
     </c-col>
@@ -59,20 +63,23 @@
         </c-card-header>
         <c-card-body class="p-4">
           <p class="about-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi facere doloribus 
-            dicta nam libero suscipit eum ea illum nostrum sed! Error, sed. Culpa architecto, 
-            eum impedit nemo nostrum, modi fugit veniam minus cupiditate itaque, reiciendis 
-            libero deserunt enim ex aspernatur.
+            Je suis étudiant en Master 2 à l'Institut Galilée - Université Sorbonne Paris Nord (Paris XIII) -
+            Campus de Villetaneuse parcours Programmation, Surété et Sécurité (P2S). 
+            Passionné par la Programmation suite à mes premiers cours de Python en première année de Classes Preparatoires, je suis titulaire
+            d'un diplome de licence en Sciences Mathématiques et Informatique avec la Mention Très Bien obtenu à 
+            la faculté des Sciences de Tétouan (Université Abdelmalek Essaadi) au Maroc.
           </p>
           <p class="about-text">
-            Autem qui deleniti nam eos libero ea tenetur modi? Sequi sunt nihil temporibus 
-            laudantium voluptas, ex numquam ipsa vero cupiditate magni mollitia, obcaecati 
-            pariatur aperiam doloremque, est eveniet.
+            Fort de ces formations solides en Informatique et en Mathématiques, j'aspire et je travaille à obtenir et maitriser
+            les technologies nécessaires pour etre développeur FullStack. Les technologies que j'ai les plus utilisées durant mon cursurs
+            sont Java, Python, Laravel/PHP, HTML/CSS3, etc. Conscient de l'évolution constante de la tech, je me forme quotidiennement
+            au moyen de certifications et de plateforme d'apprentissage comme OpenClassrooms.
           </p>
           <p class="about-text mb-0">
-            Dolorum iste, ut architecto quisquam quam itaque fugit pariatur ab repellat quis 
-            quaerat temporibus dolor exercitationem suscipit dolore, deserunt sint perferendis 
-            veniam fuga cumque? Distinctio quae libero sapiente, corporis temporibus provident vel!
+            En plus de ces excellents résultats scolaires et de ma passion pour le développement logiciel, je me distingue par une envie de trouver des solutions,
+            de rechercher les meilleures et les plus simples face aux problèmes qui se présentent. Doté, d'une aisance à m'adapter aux nouvelles situations, je suis partisan 
+            du travail en équipe et du travail bien fait. Cela s'explique par ma capacité à aller vers les autres pour en savoir davantage et aussi leur communiquer mes idées. Je suis actuellement en recherche d'un stage 
+            de Fin d'Etudes de 4 à 6 mois à partir de Mars 2026 dans le domaine du développement et je serai ravi de collaborer avec vous.
           </p>
         </c-card-body>
       </c-card>

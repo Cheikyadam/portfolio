@@ -18,36 +18,39 @@
 
       <!-- Timeline container -->
       <div class="timeline">
+
+        @for(exp of experiences; track exp.id; let i = $index){
         <!-- Expérience 1 - Gauche -->
-        <div class="timeline-item left">
+        <div class="timeline-item" [ngClass]="i % 2 === 0 ? 'left' : 'right'">
           <div class="timeline-content">
             <c-card class="experience-card">
               <c-card-body>
                 <div class="experience-header">
                   <span class="date">
                     <ng-icon name="ionCalendar" class="me-2"></ng-icon>
-                    Janvier 2023 - Décembre 2023
+                    <span class="capitalize">{{ exp.startDate | date: "MMMM yyyy" }} </span>&nbsp;–&nbsp;
+                    <span class="capitalize"> @if(exp.endDate){ {{ exp.endDate | date: "MMMM yyyy" }} } @else{ Présent }</span> 
                   </span>
-                  <a href="https://entreprise.com" target="_blank" class="company-link">
+                  <a [href]="exp.companyWebsite" target="_blank" class="company-link">
                     <ng-icon name="ionBusiness" class="me-1"></ng-icon>
-                    Nom Entreprise 1
+                    {{ exp.companyName }}
                     <ng-icon name="ionOpenOutline" size="16" class="ms-1"></ng-icon>
                   </a>
                 </div>
-                <h3 class="experience-title">Développeur Full Stack</h3>
+                <h3 class="experience-title">{{ exp.jobTitle }}</h3>
                 <ul class="missions-list">
-                  <li>Développement d'une application web en Angular et Node.js</li>
-                  <li>Mise en place d'une architecture microservices</li>
-                  <li>Amélioration des performances de 40%</li>
+                  @for (mission of exp.missions; track mission){
+                  <li>{{ mission }}</li>
+                  }
                 </ul>
               </c-card-body>
             </c-card>
           </div>
           <div class="timeline-dot"></div>
         </div>
-
+      }
         <!-- Expérience 2 - Droite -->
-        <div class="timeline-item right">
+        <!-- <div class="timeline-item right">
           <div class="timeline-content">
             <c-card class="experience-card">
               <c-card-body>
@@ -72,10 +75,10 @@
             </c-card>
           </div>
           <div class="timeline-dot"></div>
-        </div>
+        </div> -->
 
         <!-- Expérience 3 - Gauche -->
-        <div class="timeline-item left">
+        <!-- <div class="timeline-item left">
           <div class="timeline-content">
             <c-card class="experience-card">
               <c-card-body>
@@ -100,7 +103,8 @@
             </c-card>
           </div>
           <div class="timeline-dot"></div>
-        </div>
+        </div> -->
+
       </div>
     </c-col>
   </c-row>

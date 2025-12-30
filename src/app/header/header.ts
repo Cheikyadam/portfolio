@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {
   CollapseDirective,
   NavbarBrandDirective,
@@ -8,6 +8,7 @@ import {
   NavItemComponent,
   NavLinkDirective, 
 } from '@coreui/angular';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-header',
@@ -24,5 +25,6 @@ import {
   styleUrl: './header.scss',
 })
 export class Header {
-
+  
+  @Input() user!: User;
 }
