@@ -1,5 +1,6 @@
 import { Formation } from "./formation";
 import { Experience } from "./experience";
+import { Project } from "./project";
 
 export class User{
 
@@ -13,6 +14,7 @@ export class User{
         public photoUrl:string,
         public experiences: Experience[],
         public formations: Formation [],
+        public projects: Project[],
         public discord?:string,
         public phoneNumber?:string,
     ){}

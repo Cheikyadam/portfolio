@@ -3,7 +3,6 @@ import { ContainerComponent, RowComponent, ColComponent, CardComponent, CardBody
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { ionBriefcase, ionBusiness, ionCalendar, ionOpenOutline } from '@ng-icons/ionicons';
 import { Experience } from '../../models/experience';
-import { RouterLink } from "@angular/router";
 import { DatePipe, NgClass } from '@angular/common';
 
 @Component({
