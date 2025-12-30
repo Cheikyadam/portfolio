@@ -20,7 +20,7 @@ export class User{
     ){}
 
     get linkedinUrl(): string {
-        return `https://linkedin.com/${this.linkedin}`;
+        return `https://linkedin.com/in/${this.linkedin}`;
     }
 
     get discordUrl(): string | null {
