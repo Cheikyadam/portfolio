@@ -25,7 +25,7 @@ export class UserService{
             "Freelance Développement Mobile",
             [
                 "Développement mobile en méthodologie Agile avec Jira",
-                "Conception, design et dévéloppement avec Flutter",
+                "Conception, design et développement avec Flutter",
                 "Intégration d'API Rest"
             ],
             new Date(2025, 5),
@@ -37,8 +37,8 @@ export class UserService{
         new Experience("DawnSoft",
             "Freelance Développeur Backend",
             [
-                "Conception, Développement d'API REST en PHP/Laravel avec MySQL",
-                "Conception, Développement d'API REST en Node.js/Express avec MongoDB",
+                "Conception, Développement d'API REST en PHP / Laravel avec MySQL",
+                "Conception, Développement d'API REST en Node.js / Express avec MongoDB",
             ],
             new Date(2024, 8),
             undefined,
@@ -47,7 +47,7 @@ export class UserService{
         ),
 
         new Experience("InnovQube",
-            "Stage Développement PHP/Laravel",
+            "Stage Développement PHP / Laravel",
             [
                 "Développement web en méthodologie Agile",
                 "Correction de bugs, documentation et création de panel admin avec Laravel Filament"
@@ -62,7 +62,7 @@ export class UserService{
             "Stage Développement Mobile",
             [
                 "Développement d’application mobile avec Flutter et Firebase",
-                "Back-oﬃce avec Django/Python, web scraping"
+                "Back-oﬃce avec Django / Python, web scraping avec Selenium"
             ],
             new Date(2025, 0),
             new Date(2025, 2),
@@ -76,8 +76,8 @@ export class UserService{
         new Formation(
             false,
             "Institut Galilée - USPN (Paris XIII)",
-            "Master Informatique P2S (Programmation Sûreté et Sécurité",
-            ["Top 6 Master en Programmtion en France"],
+            "Master Informatique P2S (Programmation Sûreté et Sécurité)",
+            ["Top 6 Master en Programmation en France"],
             new Date(2024, 8),
             undefined,
             "https://galilee.univ-paris13.fr/",
@@ -104,7 +104,7 @@ export class UserService{
             true,
             "ALX Africa",
             "Certficat en génie logiciel",
-            ["Programmation en C, Python, HTML/JavaScript, SQL, Scripts Shell, déploiement web,etc."],
+            ["Programmation en C, Python, HTML / CSS, JavaScript, SQL, Scripts Shell, déploiement web, etc."],
             new Date(2023, 5),
             new Date(2024, 9),
             "https://www.alxafrica.com/",
@@ -130,7 +130,7 @@ export class UserService{
         new Project(
             "WhatSecure",
             `
-            WhatSecure est mon projet de fin d'études pour l'obtention du diplome de Licence. Il a été développé en binôme sous la supervision d'un enseignant du parcours.
+            WhatSecure est mon projet de fin d'études pour l'obtention du diplôme de Licence. Il a été développé en binôme sous la supervision d'un enseignant du parcours.
             En plus d'offrir les fonctionnalités principales d'une application de messagerie (échange de texte, images, vidéos), WhatSecure a l'avantage de se verouiller
             automatiquement si un autre utilisateur tente de visualiser vos messages en même temps que vous.
             `,
@@ -168,7 +168,7 @@ export class UserService{
             `
             Ce projet d'apprentissage du langage Java a été fait en groupe de 3. Son but est de simuler les problèmes dans les environnements client-serveur.
             Il y'avait d'un coté les clients qui tentaient de télécharger des fichiers et de l'autre coté le serveur qui tentait de repondre aux différentes demandes.
-            Il faut noter qu'une connexion sur le serveur etait coupée avec une probabilité P donnée rendant le téléchargement de blocs de fichiers fastidieus. Nous avons réussi ce 
+            Il faut noter qu'une connexion sur le serveur etait coupée avec une probabilité P donnée rendant le téléchargement de blocs de fichiers fastidieux. Nous avons réussi ce 
             projet avec la note de 17/20.
             `,
             ["Java", "Thread", "Socket", "Concurrence", "ServerSocket", "File", "Système distribué"],

@@ -45,12 +45,13 @@
                   }
                 </ul>
                 <div class="edu-card-footer mt-3">
+                  @if (!formation.isResourceMissing){
                   <a [href]="formation.resourceLink" target="_blank" class="edu-cert-link disabled" [ngClass]="{'disabled':formation.isResourceMissing}">
                     @if(formation.isCertif){
                       <ng-icon name="ionRibbon" class="me-2"></ng-icon> Voir le certificat
                     }@else{
                     <ng-icon name="ionDocumentText" class="me-2"></ng-icon> Plaquette formation}
-                  </a>
+                  </a>}
                 </div>
               </c-card-body>
             </c-card>

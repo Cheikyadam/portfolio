@@ -9,6 +9,18 @@
 
   <c-row>
     <c-col>
+       <app-skills></app-skills>
+    </c-col>
+  </c-row>
+
+  <c-row>
+    <c-col>
+      <app-projects [projects]="user.projects"></app-projects>
+    </c-col>
+  </c-row>
+
+  <c-row>
+    <c-col>
       <app-experiences [experiences]="user.experiences"></app-experiences>
     </c-col>
   </c-row>
@@ -18,19 +30,7 @@
       <app-education [formations]="user.formations"></app-education>
     </c-col>
   </c-row>
-
-  <c-row>
-    <c-col>
-      <app-projects [projects]="user.projects"></app-projects>
-    </c-col>
-  </c-row>
-     
-  <c-row>
-    <c-col>
-       <app-skills></app-skills>
-    </c-col>
-  </c-row>
-
+    
   <c-row>
     <c-col>
       <app-footer [user]="user"></app-footer>
