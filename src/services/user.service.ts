@@ -136,9 +136,8 @@ export class UserService{
             `,
             ["Dart", "Flutter", "Java", "Spring Boot", "MongoDB", "API REST", "WebSocket", "Cryptographie", "RSA", "AES"],
             "whatsecure.png",
-            "https://www.canva.com/design/DAGJ1yqKEnk/AOHfPVVke0pdXABudRiKcQ/edit?utm_content=DAGJ1yqKEnk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+            "https://github.com/Cheikyadam/WhatSecure"
         ),
-
 
         new Project(
             "USPN Maps",
@@ -149,7 +148,7 @@ export class UserService{
             `,
             ["Extraction de données", "Python", "Kotlin", "Android Studio", "SQL", "SQLite", "OSM", "Nginx", "Docker", "Google Play"],
             "uspn_maps.jpg",
-            "https://www.canva.com/design/DAG6EFcJvCk/bzHvMhHbxht4nr5zzOlg-w/edit?utm_content=DAG6EFcJvCk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+            "https://github.com/Erreur40A/USPNMaps"
         ),
 
         new Project(
@@ -160,7 +159,7 @@ export class UserService{
             `,
             ["Java", "Android Studio", "SQL", "SQLite",],
             "actilife.png",
-            "https://www.canva.com/design/DAG6D1_Wsjo/gRBNJAw85ES9K8FmEBexTQ/edit?utm_content=DAG6D1_Wsjo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+            "https://github.com/Erreur40A/ActiLife"
         ),
 
         new Project(
@@ -173,7 +172,7 @@ export class UserService{
             `,
             ["Java", "Thread", "Socket", "Concurrence", "ServerSocket", "File", "Système distribué"],
             "client_server.jpg",
-            "https://drive.google.com/file/d/1ubdPsZOlrxZDWbHFOU9xTuxxzDyqpTBh/view?usp=sharing"
+            "https://github.com/anisbl13/Projet_java"
         ),
 
         new Project(

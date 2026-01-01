@@ -9,7 +9,7 @@ import { Project } from '../../models/project';
   imports: [ContainerComponent, RowComponent, ColComponent, BadgeComponent, NgIcon, CardComponent, CardBodyComponent],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
-  viewProviders: [provideIcons({ ionCodeSlash, ionEye, ionOpenOutline,  })]
+  viewProviders: [provideIcons({ ionCodeSlash, ionEye, ionOpenOutline })]
 
 })
 export class Projects {
