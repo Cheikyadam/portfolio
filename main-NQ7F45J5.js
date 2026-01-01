@@ -8,19 +8,19 @@ import{$ as Ln,$a as ae,A as q0,Aa as Pn,Ab as Yt,B as Dn,Ba as Q0,Bb as Qn,C as
             WhatSecure est mon projet de fin d'\xE9tudes pour l'obtention du dipl\xF4me de Licence. Il a \xE9t\xE9 d\xE9velopp\xE9 en bin\xF4me sous la supervision d'un enseignant du parcours.
             En plus d'offrir les fonctionnalit\xE9s principales d'une application de messagerie (\xE9change de texte, images, vid\xE9os), WhatSecure a l'avantage de se verouiller
             automatiquement si un autre utilisateur tente de visualiser vos messages en m\xEAme temps que vous.
-            `,["Dart","Flutter","Java","Spring Boot","MongoDB","API REST","WebSocket","Cryptographie","RSA","AES"],"whatsecure.png","https://www.canva.com/design/DAGJ1yqKEnk/AOHfPVVke0pdXABudRiKcQ/edit?utm_content=DAGJ1yqKEnk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"),new Ge("USPN Maps",`
+            `,["Dart","Flutter","Java","Spring Boot","MongoDB","API REST","WebSocket","Cryptographie","RSA","AES"],"whatsecure.png","https://github.com/Cheikyadam/WhatSecure"),new Ge("USPN Maps",`
             USPN Maps est une application Android d\xE9velopp\xE9e en Master 2. Son objectif principal est d'aider les utilisateurs \xE0 trouver les diff\xE9rentes salles du Campus de Villetaneuse.
             Elle propose la recherche de salles, la consultation des informations sur les salles et un itin\xE9raire pour rejoindre les salles au sein du Campus. Les itin\xE9raires sont obtenues
             gr\xE2ce \xE0 un serveur de tuiles h\xE9berg\xE9 via Docker et Nginx. USPN Maps a \xE9t\xE9 d\xE9ploy\xE9 sur Google Play en tests internes.
-            `,["Extraction de donn\xE9es","Python","Kotlin","Android Studio","SQL","SQLite","OSM","Nginx","Docker","Google Play"],"uspn_maps.jpg","https://www.canva.com/design/DAG6EFcJvCk/bzHvMhHbxht4nr5zzOlg-w/edit?utm_content=DAG6EFcJvCk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"),new Ge("ActiLife",`
+            `,["Extraction de donn\xE9es","Python","Kotlin","Android Studio","SQL","SQLite","OSM","Nginx","Docker","Google Play"],"uspn_maps.jpg","https://github.com/Erreur40A/USPNMaps"),new Ge("ActiLife",`
             ActiLife est une application Android d\xE9velopp\xE9e en Master 1. Son but est d'aider les utilisateurs \xE0 veiller sur leur sant\xE9. Elle leur offre des 
             fonctionnalit\xE9s comme les rappels de sport, de sommeil, le suivi du poids et des calories. Elle a \xE9t\xE9 con\xE7ue et d\xE9velopp\xE9e en groupe de quatre.
-            `,["Java","Android Studio","SQL","SQLite"],"actilife.png","https://www.canva.com/design/DAG6D1_Wsjo/gRBNJAw85ES9K8FmEBexTQ/edit?utm_content=DAG6D1_Wsjo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"),new Ge("Projet Client Serveur",`
+            `,["Java","Android Studio","SQL","SQLite"],"actilife.png","https://github.com/Erreur40A/ActiLife"),new Ge("Projet Client Serveur",`
             Ce projet d'apprentissage du langage Java a \xE9t\xE9 fait en groupe de 3 en Master 1. Son but est de simuler les probl\xE8mes dans les environnements client-serveur.
             Il y'avait d'un cot\xE9 les clients qui tentaient de t\xE9l\xE9charger des fichiers et de l'autre cot\xE9 le serveur qui tentait de repondre aux diff\xE9rentes demandes.
             Il faut noter qu'une connexion sur le serveur etait coup\xE9e avec une probabilit\xE9 P donn\xE9e rendant le t\xE9l\xE9chargement de blocs de fichiers fastidieux. Nous avons r\xE9ussi ce 
             projet avec la note de 17/20.
-            `,["Java","Thread","Socket","Concurrence","ServerSocket","File","Syst\xE8me distribu\xE9"],"client_server.jpg","https://drive.google.com/file/d/1ubdPsZOlrxZDWbHFOU9xTuxxzDyqpTBh/view?usp=sharing"),new Ge("Architecture Distribu\xE9e Java",`
+            `,["Java","Thread","Socket","Concurrence","ServerSocket","File","Syst\xE8me distribu\xE9"],"client_server.jpg","https://github.com/anisbl13/Projet_java"),new Ge("Architecture Distribu\xE9e Java",`
             C'est un projet d'apprentissage des syst\xE8mes distribu\xE9s en Java r\xE9alis\xE9 en groupe de 4 en fin de licence.
             Pour mon groupe, il s'agissait de d\xE9velopper une application de gestion de ressources humaines. Nous avions d'un c\xF4t\xE9 notre serveur de base de donn\xE9es MySQL que nous avons connect\xE9 \xE0 nos diff\xE9rentes 
             applications Java gr\xE2ce \xE0 JDBC. Par besoin d'apprentissage, les interfaces ont \xE9t\xE9 faites avec Java FX (utilisation de Sc\xE8ne Builder pour acc\xE9l\xE9rer le d\xE9veloppement) et Swing pour les versions desktop, JSP / Servlet pour le web.
