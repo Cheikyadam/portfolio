@@ -166,7 +166,7 @@ export class UserService{
         new Project(
             "Projet Client Serveur",
             `
-            Ce projet d'apprentissage du langage Java a été fait en groupe de 3. Son but est de simuler les problèmes dans les environnements client-serveur.
+            Ce projet d'apprentissage du langage Java a été fait en groupe de 3 en Master 1. Son but est de simuler les problèmes dans les environnements client-serveur.
             Il y'avait d'un coté les clients qui tentaient de télécharger des fichiers et de l'autre coté le serveur qui tentait de repondre aux différentes demandes.
             Il faut noter qu'une connexion sur le serveur etait coupée avec une probabilité P donnée rendant le téléchargement de blocs de fichiers fastidieux. Nous avons réussi ce 
             projet avec la note de 17/20.
@@ -176,6 +176,17 @@ export class UserService{
             "https://drive.google.com/file/d/1ubdPsZOlrxZDWbHFOU9xTuxxzDyqpTBh/view?usp=sharing"
         ),
 
+        new Project(
+            "Architecture Distribuée Java",
+            `
+            C'est un projet d'apprentissage des systèmes distribués en Java réalisé en groupe de 4 en fin de licence.
+            Pour mon groupe, il s'agissait de développer une application de gestion de ressources humaines. Nous avions d'un côté notre serveur de base de données MySQL que nous avons connecté à nos différentes 
+            applications Java grâce à JDBC. Par besoin d'apprentissage, les interfaces ont été faites avec Java FX (utilisation de Scène Builder pour accélérer le développement) et Swing pour les versions desktop, JSP / Servlet pour le web.
+            `,
+            ["Java / JEE", "MySQL", "Swing", "Java FX", "Scène Builder", "JSP / Servlet", "Tomcat"],
+            "archi_dist.png",
+            ""
+        ),
     ]
 
     private user = new User(
