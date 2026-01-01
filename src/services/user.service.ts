@@ -185,7 +185,7 @@ export class UserService{
             `,
             ["Java / JEE", "MySQL", "Swing", "Java FX", "Scène Builder", "JSP / Servlet", "Tomcat"],
             "archi_dist.png",
-            ""
+            "https://github.com/Cheikyadam/ARCHI-DISTRIBUEE"
         ),
     ]
 
