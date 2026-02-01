@@ -13,7 +13,7 @@ export class Formation extends Experience{
         public resourceLink?:string,
         
     ){
-        super(schoolName, cursusTitle, cursursTag, startDate,  endDate, companyWebsite, location )
+        super(schoolName, cursusTitle, cursursTag, [], startDate,  endDate, companyWebsite, location )
     }
 
     get isOnGoing():boolean{

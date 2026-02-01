@@ -42,6 +42,11 @@
                   <li>{{ mission }}</li>
                   }
                 </ul>
+                <div class="project-tags mt-auto">
+                  @for(skill of exp.skills; track skill){
+                  <c-badge class="tech-badge">{{ skill }}</c-badge>
+                  }
+                </div>
               </c-card-body>
             </c-card>
           </div>

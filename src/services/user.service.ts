@@ -15,10 +15,11 @@ export class UserService{
             [
                 "Accompagnement des collégiens et lycéens en Mathématiques et Python"
             ],
+            ["Sens de l'écoute", "Aisance communicationnelle"],
             new Date(2024, 11),
             undefined,
             "https://www.completude.com",
-            "Paris"
+            "Paris",
         ),
 
         new Experience("Meltech",
@@ -28,21 +29,10 @@ export class UserService{
                 "Conception, design et développement avec Flutter",
                 "Intégration d'API Rest"
             ],
-            new Date(2025, 5),
-            undefined,
+            ["Dart", "Flutter", "Jira", "Travail d'équipe", "State Management", "Développement mobile", "Console Google Play"],
+            new Date(2025, 8),
+            new Date(2025, 11),
             "https://meltech.tech",
-            "Distanciel"
-        ),
-
-        new Experience("DawnSoft",
-            "Freelance Développeur Backend",
-            [
-                "Conception, Développement d'API REST en PHP / Laravel avec MySQL",
-                "Conception, Développement d'API REST en Node.js / Express avec MongoDB",
-            ],
-            new Date(2024, 8),
-            undefined,
-            "https://www.dawnsoftbf.com/",
             "Distanciel"
         ),
 
@@ -52,6 +42,7 @@ export class UserService{
                 "Développement web en méthodologie Agile",
                 "Correction de bugs, documentation et création de panel admin avec Laravel Filament"
             ],
+            ["PHP", "Laravel", "Filament", "Agile/Scrum", "Documentation technique", "Déploiement Linux"],
             new Date(2025, 6),
             new Date(2025, 7),
             "https://innovqube.com",
@@ -64,11 +55,24 @@ export class UserService{
                 "Développement d’application mobile avec Flutter et Firebase",
                 "Back-oﬃce avec Django / Python, web scraping avec Selenium"
             ],
+            ["Dart", "Flutter", "Python","Django", "Selenium", "Web Scraping", "Figma", "HTML", "CSS", "JavaScript", "Dashboard admin"],
             new Date(2025, 0),
             new Date(2025, 2),
             "https://goaicorporation.org/",
             "Distanciel"
-        )
+        ),
+        new Experience("DawnSoft",
+            "Freelance Développeur Backend",
+            [
+                "Conception, Développement d'API REST en PHP / Laravel avec MySQL",
+                "Conception, Développement d'API REST en Node.js / Express avec MongoDB",
+            ],
+            ["API Rest", "PHP", "Laravel", "MySQL", "Node.js","Express", "Mongoose", "MongoDB", "Mailing", "Authentification"],
+            new Date(2024, 8),
+            new Date(2025, 11),
+            "https://www.dawnsoftbf.com/",
+            "Distanciel"
+        ),
     ]
 
     private formations = [
@@ -200,7 +204,6 @@ export class UserService{
         this.formations,
         this.projects,
         "cheick_adam",
-        "+33 745 318 120"
     )
 
     getUser():User{

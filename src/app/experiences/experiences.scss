@@ -178,6 +178,30 @@
   margin: 0;
 }
 
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-badge {
+  background: rgba(108, 99, 255, 0.15);
+  color: #8b84ff;
+  border: 1px solid rgba(108, 99, 255, 0.3);
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: rgba(108, 99, 255, 0.3);
+  border-color: rgba(108, 99, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+
 .missions-list li {
   position: relative;
   padding-left: 1.8rem;
@@ -269,3 +293,4 @@
     margin-top: 0.5rem;
   }
 }
+

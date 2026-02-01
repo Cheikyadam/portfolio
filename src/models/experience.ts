@@ -6,10 +6,11 @@ export class Experience{
         public companyName:string,
         public jobTitle:string,
         public missions:string[],
+        public skills:string[],
         public startDate:Date,
         public endDate?:Date,
         public companyWebsite?:string,
-        public location?:string
+        public location?:string,
     ){
         this.id = crypto.randomUUID();
     }

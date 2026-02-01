@@ -1,60 +1,254 @@
-# Portfolio
+# 🚀 Angular Portfolio Template
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.1.
+[![Framework - Angular](https://img.shields.io/badge/Framework-Angular-dd0031?style=for-the-badge&logo=angular)](https://angular.io/)
+[![Deployment - GitHub Actions](https://img.shields.io/badge/Deployment-GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions)](https://github.com/features/actions)
 
-## Development server
+Un template de portfolio moderne développé avec Angular, entièrement configurable via un service centralisé. Conçu pour faciliter la personnalisation et le déploiement automatique via GitHub Actions.
 
-To start a local development server, run:
+🌍 **Site en ligne :** [https://portfolio.cheikyadam.me](#)
 
+---
+
+## 📋 Table des matières
+
+- [Aperçu](#-aperçu)
+- [Installation](#-installation)
+- [Configuration](#-configuration)
+- [Déploiement](#-déploiement)
+- [Structure des données](#-structure-des-données)
+- [Licence](#-licence)
+
+---
+
+## ✨ Aperçu
+
+Ce portfolio Angular est conçu pour être facilement réutilisable et personnalisable. Toutes les informations (profil, expériences, formations, projets) sont centralisées dans un seul fichier de service, permettant une mise à jour rapide sans modifier les composants.
+
+**Fonctionnalités principales :**
+- Configuration centralisée via un service unique
+- Génération automatique des URLs (GitHub, LinkedIn, Mail, etc.)
+- Déploiement automatique avec GitHub Actions
+- Support des domaines personnalisés via CNAME
+- Structure de données typée avec TypeScript
+
+---
+
+## 🚀 Installation
+
+### Prérequis
+
+- Node.js (version 18 ou supérieure)
+- npm ou yarn
+- Angular CLI
+
+### Étapes d'installation
 ```bash
+# Cloner le dépôt
+git clone https://github.com/votre-username/votre-repo.git
+cd votre-repo
+
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+L'application sera accessible sur `http://localhost:4200/`
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## ⚙️ Configuration
 
-```bash
-ng generate component component-name
+### 1. Fichier de configuration principal
+
+Tout le contenu du portfolio se configure dans un seul fichier :
+
+**📍 `src/services/user.service.ts`**
+
+### 2. Remplir vos informations
+
+#### Étape 1 : Déclarer vos données
+
+En haut du fichier, créez vos tableaux de données :
+```typescript
+// Vos expériences professionnelles
+private experiences: Experience[] = [
+  new Experience(
+    "Nom de l'entreprise",
+    "Intitulé du poste",
+    ["Mission 1", "Mission 2", "Mission 3"],
+    ["Angular", "TypeScript", "Git"],
+    new Date(2023, 0, 1),
+    new Date(2024, 11, 31),
+    "https://entreprise.com",
+    "Paris, France"
+  ),
+  // ... autres expériences
+];
+
+// Vos formations
+private formations: Formation[] = [
+  new Formation(
+    false, // isCertif
+    "Nom de l'école",
+    "Titre de la formation",
+    ["Compétence 1", "Compétence 2"],
+    new Date(2020, 8, 1),
+    new Date(2023, 5, 30),
+    "https://ecole.com",
+    "Lyon, France",
+    "https://lien-vers-diplome.com"
+  ),
+  // ... autres formations
+];
+
+// Vos projets
+private projects: Project[] = [
+  new Project(
+    "Nom du projet",
+    "Description détaillée du projet",
+    ["Angular", "Node.js", "MongoDB"],
+    "assets/images/projet.png",
+    "https://github.com/username/projet"
+  ),
+  // ... autres projets
+];
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+#### Étape 2 : Configurer votre profil
 
-```bash
-ng generate --help
+Modifiez l'instance `User` avec vos informations personnelles :
+```typescript
+private user = new User(
+  "VotreUsernameGitHub",
+  "Prénom",
+  "NOM",
+  "Votre titre professionnel",
+  "votre-pseudo-linkedin",
+  "votre.email@exemple.com",
+  "assets/images/photo-profil.png",
+  this.experiences,
+  this.formations,
+  this.projects,
+  "votre-id-discord", // optionnel
+  "+33612345678"      // optionnel
+);
 ```
 
-## Building
+**Note :** Les URLs sont générées automatiquement à partir des informations fournies (GitHub, LinkedIn, Mail, Discord, Téléphone).
 
-To build the project run:
+### 3. Ajouter vos images
 
-```bash
-ng build
-```
+Placez vos images dans le dossier `src/assets/images/` et référencez-les dans votre configuration.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🚀 Déploiement
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Le projet inclut deux workflows GitHub Actions pour le déploiement automatique :
 
-```bash
-ng test
-```
+### Option 1 : Déploiement sur GitHub Pages (username.github.io)
 
-## Running end-to-end tests
+**Fichier :** `ghpages-conf-deploy-github-io.yml`
 
-For end-to-end (e2e) testing, run:
+Idéal pour un déploiement sur `https://votre-username.github.io/nom-repo`
 
-```bash
-ng e2e
-```
+### Option 2 : Déploiement avec domaine personnalisé (recommandé)
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+**Fichier :** `.github/workflows/deploy.yml`
 
-## Additional Resources
+Ce workflow :
+- Compile automatiquement le projet Angular
+- Configure le fichier `CNAME` avec votre domaine personnalisé
+- Déploie sur la branche `gh-pages`
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# portfolio
+### Configuration du déploiement
+
+1. **Dans votre dépôt GitHub :**
+   - Allez dans `Settings` > `Pages`
+   - Source : sélectionnez la branche `gh-pages`
+   - Dossier : `/ (root)`
+
+2. **Pour un domaine personnalisé :**
+   - Modifiez le fichier `.github/workflows/deploy.yml`
+   - Ajoutez votre domaine dans la configuration CNAME
+   - Configurez les DNS de votre domaine pour pointer vers GitHub Pages
+
+3. **Déclenchement automatique :**
+   - Chaque push sur la branche `main` déclenche le déploiement automatique
+
+---
+
+## 📊 Structure des données
+
+Le projet utilise quatre classes TypeScript pour structurer les données :
+
+### `User`
+
+Gère les informations personnelles et génère automatiquement les URLs.
+
+**Propriétés :**
+- `githubUsername`, `firstname`, `lastname`, `jobTitle`
+- `linkedin`, `mail`, `photoUrl`
+- `experiences[]`, `formations[]`, `projects[]`
+- `discord` (optionnel), `phoneNumber` (optionnel)
+
+**Getters automatiques :**
+- `linkedinUrl`, `githubUrl`, `mailUrl`, `discordUrl`, `phoneUrl`
+
+### `Project`
+
+Représente un projet avec génération automatique d'ID unique.
+
+**Propriétés :**
+- `id` (généré automatiquement via `crypto.randomUUID()`)
+- `name`, `description`, `techStack[]`
+- `imageLink` (optionnel), `projectLink` (optionnel)
+
+### `Experience`
+
+Représente une expérience professionnelle.
+
+**Propriétés :**
+- `id` (généré automatiquement)
+- `companyName`, `jobTitle`, `missions[]`, `skills[]`
+- `startDate`, `endDate` (optionnel)
+- `companyWebsite` (optionnel), `location` (optionnel)
+
+### `Formation`
+
+Hérite de `Experience` pour représenter formations et certifications.
+
+**Propriétés supplémentaires :**
+- `isCertif` (booléen)
+- `resourceLink` (optionnel)
+
+**Getters :**
+- `isOnGoing` : vérifie si la formation est en cours
+- `isResourceMissing` : vérifie l'absence de ressource
+
+---
+
+## 🛠️ Technologies utilisées
+
+- **Framework :** Angular 18+
+- **Langage :** TypeScript
+- **CI/CD :** GitHub Actions
+- **Hébergement :** GitHub Pages
+
+---
+
+## 📝 Licence
+
+Ce projet est sous licence MIT. Vous êtes libre de l'utiliser, le modifier et le distribuer.
+
+---
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou une pull request.
+
+---
+
+**Développé avec ❤️ et Angular**
