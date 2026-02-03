@@ -1,6 +1,7 @@
 import { Formation } from "./formation";
 import { Experience } from "./experience";
 import { Project } from "./project";
+import { Skill } from "./skill";
 
 export class User{
 
@@ -12,6 +13,8 @@ export class User{
         public linkedin:string,
         public mail:string,
         public photoUrl:string,
+        public about:string,
+        public skills:Skill[],
         public experiences: Experience[],
         public formations: Formation [],
         public projects: Project[],

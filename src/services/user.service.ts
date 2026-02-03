@@ -3,11 +3,93 @@ import { User } from "../models/user";
 import { Experience } from "../models/experience";
 import { Formation } from "../models/formation";
 import { Project } from "../models/project";
+import { Skill } from "../models/skill";
 
 @Injectable({
     "providedIn":"root"
 })
 export class UserService{
+
+    private skills = [
+        new Skill(
+            "Frontend",
+            "ionLogoHtml5",
+            [
+            "Angular",
+            "Vue.js",
+            "TypeScript",
+            "HTML5 / CSS3",
+            "Bootstrap / CoreUI",
+            "Blade (Laravel)"
+            ]
+        ),
+
+        new Skill(
+            "Backend",
+            "ionServer",
+            [
+            "Node.js",
+            "Express",
+            "Laravel",
+            "Spring Boot",
+            "REST API",
+            "SQL / MySQL",
+            "NoSQL / MongoDB",
+            "Swagger / OpenAPI"
+            ]
+        ),
+
+        new Skill(
+            "DevOps & Déploiement",
+            "ionCloudUpload",
+            [
+            "Docker",
+            "Linux (Ubuntu / Debian)",
+            "Nginx",
+            "CI/CD (GitHub Actions)",
+            "CI/CD (GitLab)",
+            "Jest",
+            "Unit tests"
+            ]
+        ),
+
+        new Skill(
+            "Outils",
+            "ionConstruct",
+            [
+            "Git / GitHub",
+            "Agile (Scrum)",
+            "Postman",
+            "Figma",
+            "Jira"
+            ]
+        ),
+
+        new Skill(
+            "Soft Skills",
+            "ionPersonCircle",
+            [
+            "Travail d'équipe",
+            "Communication",
+            "Gestion du stress",
+            "Autonomie",
+            "Adaptabilité",
+            "Organisation",
+            "Qualité rédactionnelle"
+            ]
+        ),
+
+        new Skill(
+            "Notions & Bases techniques",
+            "ionLayersOutline",
+            [
+            "C",
+            "Haskell",
+            "Scala",
+            "Programmation fonctionnelle"
+            ]
+        )
+    ];
 
     private experiences = [
         new Experience("Complétude",
@@ -102,6 +184,20 @@ export class UserService{
             "https://fs.uae.ac.ma/",
             "Tétouan, Maroc",
             ""
+        ),
+
+        new Formation(
+            false,
+            "Ecole Polytechnique de Ouagadougou -  Burkina Faso",
+            "Classes Prepa - Mathématiques Physique et Sciences de l'Ingénieur (MPSI)",
+            [
+                "Mention Assez-Bien",
+            ],
+            new Date(2020, 8),
+            new Date(2021, 7),
+            "https://epo.bf",
+            "Ouagadougou, Burkina Faso",
+            "https://epo.bf/fr/programmes-formations/classes-preparatoires"
         ),
 
         new Formation(
@@ -200,6 +296,27 @@ export class UserService{
         "cheick-adam-gandema",
         "urbaingande@gmail.com",
         "pp.png",
+        `<p>
+            Je suis étudiant en Master 2 à l'Institut Galilée - Université Sorbonne Paris Nord (Paris XIII) -
+            Campus de Villetaneuse parcours Programmation, Sûreté et Sécurité (P2S). 
+            Passionné par la Programmation suite à mes premiers cours de Python en première année de Classes Preparatoires, je suis titulaire
+            d'un diplôme de licence en Sciences Mathématiques et Informatique avec la Mention Très Bien obtenu à 
+            la faculté des Sciences de Tétouan (Université Abdelmalek Essaadi) au Maroc.
+          </p>
+          <p>
+            Fort de ces formations solides en Informatique et en Mathématiques, j'aspire et je travaille à obtenir et maitriser
+            les technologies nécessaires pour être développeur FullStack. Les technologies que j'ai les plus utilisées durant mon cursurs
+            sont Java, Python, Laravel/PHP, HTML/CSS3, etc. Conscient de l'évolution constante de la tech, je me forme quotidiennement
+            au moyen de certifications et de plateforme d'apprentissage comme OpenClassrooms.
+          </p>
+          <p>
+            En plus de ces excellents résultats scolaires et de ma passion pour le développement logiciel, je me distingue par une envie de trouver des solutions,
+            de rechercher les meilleures et les plus simples face aux problèmes qui se présentent. Doté, d'une aisance à m'adapter aux nouvelles situations, je suis partisan 
+            du travail en équipe et du travail bien fait. Cela s'explique par ma capacité à aller vers les autres pour en savoir davantage et aussi leur communiquer mes idées. Je suis actuellement en recherche d'un stage 
+            de Fin d'Etudes de 4 à 6 mois à partir de Mars 2026 dans le domaine du développement et je serai ravi de collaborer avec vous.
+          </p>
+        `,
+        this.skills,
         this.experiences,
         this.formations,
         this.projects,

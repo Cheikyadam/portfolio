@@ -16,16 +16,19 @@ Un template de portfolio moderne développé avec Angular, entièrement configur
 - [Configuration](#-configuration)
 - [Déploiement](#-déploiement)
 - [Structure des données](#-structure-des-données)
+- [Icônes disponibles](#-icônes-disponibles)
 - [Licence](#-licence)
 
 ---
 
 ## ✨ Aperçu
 
-Ce portfolio Angular est conçu pour être facilement réutilisable et personnalisable. Toutes les informations (profil, expériences, formations, projets) sont centralisées dans un seul fichier de service, permettant une mise à jour rapide sans modifier les composants.
+Ce portfolio Angular est conçu pour être facilement réutilisable et personnalisable. Toutes les informations (profil, expériences, formations, projets, compétences) sont centralisées dans un seul fichier de service, permettant une mise à jour rapide sans modifier les composants.
 
 **Fonctionnalités principales :**
 - Configuration centralisée via un service unique
+- Section "À propos" avec support HTML
+- Gestion dynamique des compétences avec icônes
 - Génération automatique des URLs (GitHub, LinkedIn, Mail, etc.)
 - Déploiement automatique avec GitHub Actions
 - Support des domaines personnalisés via CNAME
@@ -68,11 +71,80 @@ Tout le contenu du portfolio se configure dans un seul fichier :
 
 ### 2. Remplir vos informations
 
-#### Étape 1 : Déclarer vos données
+#### Étape 1 : Section "À propos"
 
-En haut du fichier, créez vos tableaux de données :
+La section "À propos" supporte le HTML pour une mise en forme riche :
 ```typescript
-// Vos expériences professionnelles
+private about = `
+  <p>
+    Je suis un développeur passionné par les technologies web modernes...
+  </p>
+  <p>
+    Mes domaines d'expertise incluent <strong>Angular</strong>, 
+    <strong>TypeScript</strong> et <strong>Node.js</strong>.
+  </p>
+`;
+```
+
+#### Étape 2 : Définir vos compétences
+
+Créez vos catégories de compétences avec des icônes :
+```typescript
+private skills: Skill[] = [
+  new Skill(
+    "Frontend",
+    "ionLogoHtml5",  // Nom de l'icône
+    [
+      "Angular",
+      "Vue.js",
+      "TypeScript",
+      "HTML5 / CSS3",
+      "Bootstrap / CoreUI",
+      "Blade (Laravel)"
+    ]
+  ),
+  new Skill(
+    "Backend",
+    "ionServer",
+    [
+      "Node.js",
+      "Express",
+      "Laravel",
+      "Spring Boot",
+      "REST API",
+      "SQL / MySQL",
+      "NoSQL / MongoDB",
+      "Swagger / OpenAPI"
+    ]
+  ),
+  new Skill(
+    "DevOps & Cloud",
+    "ionCloudUpload",
+    [
+      "Docker",
+      "GitHub Actions",
+      "CI/CD",
+      "AWS / Azure",
+      "Nginx"
+    ]
+  ),
+  new Skill(
+    "Outils & Méthodologie",
+    "ionConstruct",
+    [
+      "Git / GitHub",
+      "Agile / Scrum",
+      "Jira",
+      "Postman",
+      "VS Code"
+    ]
+  ),
+  // ... autres compétences
+];
+```
+
+#### Étape 3 : Vos expériences professionnelles
+```typescript
 private experiences: Experience[] = [
   new Experience(
     "Nom de l'entreprise",
@@ -86,11 +158,13 @@ private experiences: Experience[] = [
   ),
   // ... autres expériences
 ];
+```
 
-// Vos formations
+#### Étape 4 : Vos formations
+```typescript
 private formations: Formation[] = [
   new Formation(
-    false, // isCertif
+    false, // isCertif - true pour une certification
     "Nom de l'école",
     "Titre de la formation",
     ["Compétence 1", "Compétence 2"],
@@ -102,8 +176,10 @@ private formations: Formation[] = [
   ),
   // ... autres formations
 ];
+```
 
-// Vos projets
+#### Étape 5 : Vos projets
+```typescript
 private projects: Project[] = [
   new Project(
     "Nom du projet",
@@ -116,7 +192,7 @@ private projects: Project[] = [
 ];
 ```
 
-#### Étape 2 : Configurer votre profil
+#### Étape 6 : Configurer votre profil
 
 Modifiez l'instance `User` avec vos informations personnelles :
 ```typescript
@@ -128,6 +204,8 @@ private user = new User(
   "votre-pseudo-linkedin",
   "votre.email@exemple.com",
   "assets/images/photo-profil.png",
+  this.about,
+  this.skills,
   this.experiences,
   this.formations,
   this.projects,
@@ -182,7 +260,7 @@ Ce workflow :
 
 ## 📊 Structure des données
 
-Le projet utilise quatre classes TypeScript pour structurer les données :
+Le projet utilise cinq classes TypeScript pour structurer les données :
 
 ### `User`
 
@@ -191,11 +269,23 @@ Gère les informations personnelles et génère automatiquement les URLs.
 **Propriétés :**
 - `githubUsername`, `firstname`, `lastname`, `jobTitle`
 - `linkedin`, `mail`, `photoUrl`
+- `about` : texte de présentation (supporte HTML)
+- `skills[]` : tableau de compétences
 - `experiences[]`, `formations[]`, `projects[]`
 - `discord` (optionnel), `phoneNumber` (optionnel)
 
 **Getters automatiques :**
 - `linkedinUrl`, `githubUrl`, `mailUrl`, `discordUrl`, `phoneUrl`
+
+### `Skill`
+
+Représente une catégorie de compétences avec icône.
+
+**Propriétés :**
+- `id` (généré automatiquement via `crypto.randomUUID()`)
+- `label` : nom de la catégorie (ex: "Frontend", "Backend")
+- `icon` : nom de l'icône Ionicons (ex: "ionLogoHtml5")
+- `competencies[]` : liste des compétences dans cette catégorie
 
 ### `Project`
 
@@ -221,8 +311,8 @@ Représente une expérience professionnelle.
 Hérite de `Experience` pour représenter formations et certifications.
 
 **Propriétés supplémentaires :**
-- `isCertif` (booléen)
-- `resourceLink` (optionnel)
+- `isCertif` (booléen) : true pour une certification, false pour une formation
+- `resourceLink` (optionnel) : lien vers le diplôme/certificat
 
 **Getters :**
 - `isOnGoing` : vérifie si la formation est en cours
@@ -230,10 +320,51 @@ Hérite de `Experience` pour représenter formations et certifications.
 
 ---
 
+## 🎨 Icônes disponibles
+
+Le projet utilise la bibliothèque **Ionicons** via `@ng-icons`. Voici les icônes pré-configurées pour les compétences :
+
+| Nom de l'icône | Description | Utilisation suggérée |
+|----------------|-------------|---------------------|
+| `ionLogoHtml5` | Logo HTML5 | Frontend, Web |
+| `ionServer` | Serveur | Backend, API |
+| `ionCloudUpload` | Cloud | DevOps, Cloud |
+| `ionConstruct` | Outils | Outils, Méthodologie |
+| `ionPersonCircle` | Personne | Soft Skills |
+| `ionLayersOutline` | Couches | Architecture, Design |
+
+### Ajouter de nouvelles icônes
+
+1. **Importer l'icône dans le composant Skills :**
+```typescript
+// src/app/components/skills/skills.component.ts
+import { ionDatabase } from '@ng-icons/ionicons'; // Exemple
+
+viewProviders: [provideIcons({ 
+  // ... icônes existantes
+  ionDatabase  // Nouvelle icône
+})]
+```
+
+2. **Utiliser l'icône dans votre configuration :**
+```typescript
+new Skill(
+  "Base de données",
+  "ionDatabase",  // Utiliser le nom de l'icône
+  ["PostgreSQL", "MongoDB", "Redis"]
+)
+```
+
+**Catalogue complet :** [https://ionic.io/ionicons](https://ionic.io/ionicons)
+
+---
+
 ## 🛠️ Technologies utilisées
 
 - **Framework :** Angular 18+
 - **Langage :** TypeScript
+- **UI Library :** CoreUI for Angular
+- **Icons :** Ionicons via @ng-icons
 - **CI/CD :** GitHub Actions
 - **Hébergement :** GitHub Pages
 
