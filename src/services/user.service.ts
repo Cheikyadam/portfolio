@@ -162,7 +162,7 @@ export class UserService{
         new Formation(
             false,
             "Institut Galilée - USPN (Paris XIII)",
-            "Master Informatique P2S (Programmation Sûreté et Sécurité)",
+            "Master Informatique parcours Programmation Sûreté et Sécurité (P2S)",
             ["Top 5 des Masters en Informatique et Ingénierie des Systèmes 2025 (Eduniversal)"],
             new Date(2024, 8),
             undefined,
