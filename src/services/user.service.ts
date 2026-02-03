@@ -163,7 +163,7 @@ export class UserService{
             false,
             "Institut Galilée - USPN (Paris XIII)",
             "Master Informatique P2S (Programmation Sûreté et Sécurité)",
-            ["Top 6 Master en Programmation en France"],
+            ["Top 5 des Masters en Informatique et Ingénierie des Systèmes 2025 (Eduniversal)"],
             new Date(2024, 8),
             undefined,
             "https://galilee.univ-paris13.fr/",
