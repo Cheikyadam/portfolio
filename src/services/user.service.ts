@@ -209,7 +209,7 @@ export class UserService{
             new Date(2024, 9),
             "https://www.alxafrica.com/",
             "Distanciel",
-            "https://savanna.alxafrica.com/certificates/NFp5fsGnSH"
+            "https://savanna.alxafrica.com/certificates/E2BFNHc5Mx"
         ),
     ]
 
